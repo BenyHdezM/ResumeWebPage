@@ -1,0 +1,9 @@
+.logo {
+    padding-top: 36px;
+    padding-bottom: 30px;
+}
+.row { 
+    max-width: 1170px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+}

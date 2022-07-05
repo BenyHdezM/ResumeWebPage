@@ -1,0 +1,23 @@
+.sf-menu {
+    text-align: center;
+    border-top: 1px solid #4D848C;
+    border-bottom: 1px solid #4D848C;
+    margin-bottom: 50px;
+    line-height: 0;
+}
+.sf-menu > li { 
+    padding: 12px 20px 10px;
+}
+.sf-menu > li > a{ 
+    padding: 0;
+}
+.sf-menu a, .sf-menu a:hover{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #4D808F;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    line-height: normal;
+}
