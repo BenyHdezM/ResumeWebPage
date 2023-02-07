@@ -7,7 +7,7 @@ const About = () => {
         <Container>
             <Row className="align-items-center my-5">
                 <Col md={3}>
-                    <Image src={profile} roundedCircle fluid />
+                    <Image className='picture-profile mb-3' src={profile} roundedCircle fluid />
                 </Col>
                 <Col md={9}>
                     <Container>

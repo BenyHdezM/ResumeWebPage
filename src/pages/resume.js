@@ -9,7 +9,7 @@ const Resume = () => {
     <Container>
       <Row className="align-items-center my-5">
         <Col md={3}>
-          <Image src={profile} roundedCircle fluid />
+          <Image className="picture-profile" src={profile} roundedCircle fluid />
         </Col>
         <Col md={7}>
           <Container>
