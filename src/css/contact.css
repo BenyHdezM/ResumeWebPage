@@ -1,0 +1,8 @@
+
+.centerCol{
+    display: flex;
+    justify-content: center;
+}
+.centerCol Form{
+    width: 50%;
+}

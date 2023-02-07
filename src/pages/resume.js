@@ -21,7 +21,10 @@ const Resume = () => {
         </Col>
         <Col md={2}>
           <div className="shadow-box">
-            <a href='http://benyhdez.com:4000/s/pJNw2PJi86gLABE/download/BenitoHernandez_RESUME.doc'>Dowload Latest Version<Image src={doc_download} fluid /></a>
+            <a href='http://benyhdez.com:4000/s/pJNw2PJi86gLABE/download/BenitoHernandez_RESUME.doc'>
+              Dowload Latest Version
+              <Image src={doc_download} fluid />
+            </a>
           </div>
         </Col>
       </Row>
@@ -99,9 +102,9 @@ const Resume = () => {
               <h6>Jun 2022 - Present</h6>
               <h6>Comcast Business</h6>
               <h5>Sr. Automation Engineer / FullStack .Net ReactJs</h5>
-              <p>Development and support for Admin Portal Pages and Web APIs, using NestJS technologies and working on the UI using Angular as a front-end technology,
-                working with the Agile methodology having short PBI, Scrum daily meeting, all the code Review was handled by Pull Request using GIT and GitHub,
-                and Rally as AGILE Project Management Tool.
+              <p>Development and support for Admin Portal Pages and Web APIs, using NestJS technologies and working on the UI using Angular as a front-end
+                technology, working with the Agile methodology having short PBI, Scrum daily meeting, all the code Review was handled by Pull Request using GIT
+                and GitHub, and Rally as AGILE Project Management Tool.
                 <br />
                 <br />
                 Environment: Web API, JavaScript, HTML, CSS, GIT, MongoDB, NestJs, Visual Studio Code, npm, nvm, Angular, NodeJS.</p>
@@ -160,6 +163,36 @@ const Resume = () => {
                 <br />
                 <br />
                 Environment: ADO.NET, C#, Visual Studio 2017 Pro, C++, MFC, SQL, VB6, Vmware, Perforce, OpenGL, SSMS. HTML, CSS, JavaScript, Angular.</p>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <h6>Aug 2016 – May 2017<br />Marathon Group Mexico</h6>
+              <h5>FullStack .Net Developer</h5>
+              <p>Consuming Acumatica ERP SOAP webservices into a Web Portal made from scratch, using technologies like CakePHP, HTML, CSS, JS and Bootstrap,
+                given a User friendly interface to consume Acumatica's Services to make the data insertions easier to the sellers.
+                <br />
+                <br />
+                Environment: Visual Studio Code, PHP, CakePhp, MVC, Linux Server, Windows Server, MS SQL, MySQL, SOAP, HTML5, CSS3, JS, Bootstrap, GIT, ERP,
+                Acumatica, .Net Framework.</p>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <h6>Sep 2015 – Aug 2016<br />General Electric</h6>
+              <h5>FullStack .Net Developer</h5>
+              <p>Development, Consulting, Design and Supporting for GE's software, migrations of old applications using VB6 and C++ 6. Developing new solutions 
+                in C# using ADO.NET to obtain information from the MS SQL database or update it. Upgrade old applications made in VB6 removing Crystal Report 
+                module and implement a free solution. 
+                <br />
+                <br />
+                Environment: C#, VB6, C++, MS SQL, Windows Server 2003 and 2008, Visual Studio 2010, Remote Desktop, VPS,  SQL Server Management Studio, 
+                Crystal Report, ADO.NET, ASP.Net.</p>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <h6>Jul 2014 – Sep 2015<br />GameLoft</h6>
+              <h5>C++, .Net, FullSatck Developer</h5>
+              <p>Developing and debugging of the E-Shop sites corresponding with each carrier, including billing, transactions, notifications, SMS and Web services. 
+                VideoGame programmer for platforms like iOS, android and windows phones. Working on Dungeon Hunter 5 project in the area of porting to windows phone.
+                <br />
+                <br />
+                Environment: C#, C++, .NET, MySQL, Visual Studio 2015, GIT, OpenGL, HTML, CSS, cURL, PhpStorm, Php, JavaScript, PhpMyAdmin.</p>
             </ListGroup.Item>
           </ListGroup>
         </Col>
