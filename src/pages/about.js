@@ -13,7 +13,7 @@ const About = () => {
                     <Container>
                         <p>
                             Benito Hernandez Morales is a highly skilled and knowledgeable software engineer with a passion for delivering innovative and effective
-                            solutions. With 8+ years of experience in the industry, Benito has developed a strong understanding of the software development life cycle
+                            solutions. With 9+ years of experience in the industry, Benito has developed a strong understanding of the software development life cycle
                             and the various technologies and tools involved in the creation of top-quality software. He is an expert in multiple programming languages,
                             including C#, C/C++, JS, TS, PHP, Java, Python, BASH, Kotlin, VB6, etc, and has a proven track record of delivering complex projects on time and within budget.
                             <br />
