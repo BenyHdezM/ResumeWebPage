@@ -9,13 +9,16 @@ const Resume = () => {
         <Col md={3}>
           <Image src={profile} roundedCircle fluid />
         </Col>
-        <Col md={9}>
+        <Col md={7}>
           <Container>
             <h1>Benito Hernandez Morales</h1>
             <p>
               Sr. FullStack .Net Web Developer
             </p>
           </Container>
+        </Col>
+        <Col md={2}>
+          <a href='http://benyhdez.com:4000/s/pJNw2PJi86gLABE'> Dowload The Latest Version in PDF</a>
         </Col>
       </Row>
       <Row>
