@@ -73,3 +73,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 https://mherman.org/blog/dockerizing-a-react-app/
+docker-compose -f docker-compose.prod.yml up -d --build
