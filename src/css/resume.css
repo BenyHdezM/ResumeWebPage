@@ -1,0 +1,19 @@
+
+.center {
+    text-align: center;
+  } 
+
+.shadow-box{
+    text-align: center;
+}
+.shadow-box:hover{
+    text-align: center;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+}
+
+.shadow-box img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Image, ListGroup } from 'react-bootstrap';
-import profile from '../assets/profile.jpg'
+import profile from '../assets/profile.jpg';
+import doc_download from '../assets/doc_download.png';
+import "../css/resume.css";
 
 const Resume = () => {
   return (
@@ -18,7 +20,9 @@ const Resume = () => {
           </Container>
         </Col>
         <Col md={2}>
-          <a href='http://benyhdez.com:4000/s/pJNw2PJi86gLABE'> Dowload The Latest Version in PDF</a>
+          <div className="shadow-box">
+            <a href='http://benyhdez.com:4000/s/pJNw2PJi86gLABE/download/BenitoHernandez_RESUME.doc'>Dowload Latest Version<Image src={doc_download} fluid /></a>
+          </div>
         </Col>
       </Row>
       <Row>
