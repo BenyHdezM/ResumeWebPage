@@ -1,6 +1,6 @@
-import Header from "./components/header"
-import Resume from "./pages/resume"
-import About from "./pages/about"
+import Header from "./components/header";
+import Resume from "./pages/resume";
+import About from "./pages/about";
 
 
 import { BrowserRouter, Routes, Route} from "react-router-dom";
