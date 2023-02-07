@@ -17,3 +17,8 @@
     margin-right: auto;
     width: 70%;
 }
+
+.shadow-box a { 
+    color: black;
+    text-decoration: none;
+}

@@ -1,7 +1,7 @@
 import logo from '../assets/logo.png';
 import '../App.css';
 import Menu from "./menu";
-import './header.css';
+import '../css/header.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
 function Header() {

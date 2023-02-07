@@ -1,5 +1,5 @@
 import Nav from 'react-bootstrap/Nav';
-import './menu.css';
+import '../css/menu.css';
 
 
 function Menu() {
