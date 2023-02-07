@@ -7,22 +7,19 @@ function Menu() {
         <div className="col-1-1 text-center text-uppercase">
             <Nav className='sf-menu justify-content-center' defaultActiveKey="/home" as="ul">
                 <Nav.Item as="li">
-                    <Nav.Link href="/home">Home</Nav.Link>
+                    <Nav.Link href="/">Resume</Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="/home">About</Nav.Link>
+                    <Nav.Link href="/aboutMe">About Me</Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="/home">Paintings &amp; Prints</Nav.Link>
+                    <Nav.Link href="/projects">Personal Projects</Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="/home">Lessons 2022</Nav.Link>
+                    <Nav.Link href="/videos">Videos</Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="/home">Artist Services</Nav.Link>
-                </Nav.Item>
-                <Nav.Item as="li">
-                    <Nav.Link href="/home">Contact</Nav.Link>
+                    <Nav.Link href="/contact">Contact Me</Nav.Link>
                 </Nav.Item>
             </Nav>
         </div>

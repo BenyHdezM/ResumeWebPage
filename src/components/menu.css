@@ -1,7 +1,7 @@
 .sf-menu {
     text-align: center;
-    border-top: 1px solid #4D848C;
-    border-bottom: 1px solid #4D848C;
+    border-top: 1px solid #055aa0;
+    border-bottom: 1px solid #055aa0;
     margin-bottom: 50px;
     line-height: 0;
 }
@@ -13,7 +13,7 @@
 }
 .sf-menu a, .sf-menu a:hover{
     font-family: 'Josefin Sans', sans-serif;
-    color: #4D808F;
+    color: #055aa0;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;

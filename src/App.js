@@ -1,16 +1,22 @@
 import Header from "./components/header"
-import Resume from "./components/resume"
+import Resume from "./pages/resume"
+import About from "./pages/about"
+
 
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
-    {/* <Header/> */}
+    <Header/>
     <Routes>
       <Route
-        path="/Home"
+        path="/"
         element={<Resume />}
+      />
+      <Route
+        path="/aboutMe"
+        element={<About />}
       />
     </Routes>
     </BrowserRouter>

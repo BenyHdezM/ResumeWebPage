@@ -1,21 +1,26 @@
-import logo from '../logo.svg';
+import logo from '../assets/logo.png';
 import '../App.css';
 import Menu from "./menu";
 import './header.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
 function Header() {
     return (
         <header className="header faso-header">
-            <div className="row">
-                <div className="col-1-1 text-center">
-                    <div className="logo faso-nav-heading">
-                        <a href="https://www.paulachristen.com/"><img src="https://d3ob8sux7a0mqp.cloudfront.net/2651/1898431org.jpg?cv=201909271741" alt="Paula ChristenWatercolors" title="Paula ChristenWatercolors" /></a>
-                    </div>
-                </div>
-            </div>
-            <div className='row'>
-                <Menu />
-            </div>
+            <Container>
+                <Row>
+                    <Col md={12}>
+                        <div className="logo faso-nav-heading">
+                            <a href="http://www.benyhdez.com/">
+                                <img class="center" src={logo} alt="Benito Hdez M" title="Benito Hdez M" />
+                                </a>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Menu />
+                </Row>
+            </Container>
         </header>
     );
 }
