@@ -1,11 +1,29 @@
-import Nav from 'react-bootstrap/Nav';
 import '../css/menu.css';
+import React, { useState, useEffect } from "react";
+import { Navbar, Nav } from "react-bootstrap";
 
 
-function Menu() {
+const Menu = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        });
+
+        return () => {
+            window.removeEventListener("scroll", () => { });
+        };
+    }, []);
+
+
     return (
-        <div className="col-1-1 text-center text-uppercase">
-            <Nav className='sf-menu justify-content-center' defaultActiveKey="/home" as="ul">
+        <Navbar bg="light" fixed={isScrolled ? "top" : ""}>
+            <Nav className='nav' defaultActiveKey="/home" as="ul">
                 <Nav.Item as="li">
                     <Nav.Link href="/">Resume</Nav.Link>
                 </Nav.Item>
@@ -22,7 +40,7 @@ function Menu() {
                     <Nav.Link href="/contact">Contact Me</Nav.Link>
                 </Nav.Item>
             </Nav>
-        </div>
+        </Navbar>
     );
 }
 

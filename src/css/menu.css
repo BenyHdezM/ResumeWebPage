@@ -1,27 +1,37 @@
-.sf-menu {
-    text-align: center;
-    border-top: 1px solid #055aa0;
-    border-bottom: 1px solid #055aa0;
-    margin-bottom: 50px;
-    line-height: 0;
-}
-.sf-menu > li { 
-    padding: 12px 20px 10px;
-}
-.sf-menu > li > a{ 
-    padding: 0;
-}
-.sf-menu a, .sf-menu a:hover{
-    font-family: 'Josefin Sans', sans-serif;
-    color: #055aa0;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    line-height: normal;
+.navbar{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
-.sf-menu a:hover{
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+.nav {
+    border-bottom: 1px solid #055aa0;
+    border-top: 1px solid #055aa0;
+    line-height: 0;
+    margin-bottom: 50px;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-item {
+    padding: 12px 20px 10px !important;
+}
+
+.nav-item>a {
+    padding: 0 !important;
+}
+
+.nav-item a,
+.nav-item a:hover {
+    font-family: 'Josefin Sans', sans-serif !important;
+    color: #055aa0 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+    line-height: normal !important;
+}
+
+.nav-item a:hover {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
