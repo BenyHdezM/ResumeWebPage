@@ -187,7 +187,7 @@ const Resume = () => {
             </ListGroup.Item>
             <ListGroup.Item>
               <h6>Jul 2014 – Sep 2015<br />GameLoft</h6>
-              <h5>C++, .Net, FullSatck Developer</h5>
+              <h5>C++, .Net, FullStack Developer</h5>
               <p>Developing and debugging of the E-Shop sites corresponding with each carrier, including billing, transactions, notifications, SMS and Web services. 
                 VideoGame programmer for platforms like iOS, android and windows phones. Working on Dungeon Hunter 5 project in the area of porting to windows phone.
                 <br />
