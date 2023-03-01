@@ -1,7 +1,6 @@
 version: '3.7'
 
 services:
-
   sample-prod:
     container_name: resume-web
     build:
@@ -9,3 +8,4 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - '80:80'
+    restart: unless-stopped

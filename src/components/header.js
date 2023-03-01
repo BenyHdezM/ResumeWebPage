@@ -11,7 +11,7 @@ function Header() {
                 <Row>
                     <Col md={12}>
                         <div className="logo faso-nav-heading">
-                            <a href="http://www.benyhdez.com/">
+                            <a href="http://benyhdez.com">
                                 <img class="center" src={logo} alt="Benito Hdez M" title="Benito Hdez M" />
                                 </a>
                         </div>

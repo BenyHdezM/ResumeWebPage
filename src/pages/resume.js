@@ -40,6 +40,7 @@ const Resume = () => {
               <ListGroup.Item>JavaScript</ListGroup.Item>
               <ListGroup.Item>Python</ListGroup.Item>
               <ListGroup.Item>Java</ListGroup.Item>
+              <ListGroup.Item>Kotlin</ListGroup.Item>
               <ListGroup.Item>VB6</ListGroup.Item>
               <ListGroup.Item>PHP</ListGroup.Item>
               <ListGroup.Item>HTML5</ListGroup.Item>

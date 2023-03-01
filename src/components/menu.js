@@ -25,7 +25,7 @@ const Menu = () => {
         <Navbar bg="light" fixed={isScrolled ? "top" : ""}>
             <Nav className='nav' defaultActiveKey="/home" as="ul">
                 <Nav.Item as="li">
-                    <Nav.Link href="/">Resume</Nav.Link>
+                    <Nav.Link href="/resume">Resume</Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
                     <Nav.Link href="/aboutMe">About Me</Nav.Link>

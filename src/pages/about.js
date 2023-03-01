@@ -1,6 +1,32 @@
 import React from 'react';
-import { Container, Row, Col, Image, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 import profile from '../assets/profile.jpg'
+import server from '../assets/server.jpg'
+import dockers from '../assets/dockers.png'
+import code from '../assets/code.jpeg'
+
+const projects = [
+    {
+        id: 1,
+        title: 'Linux Server at Home',
+        description: "Hosting my website on a server in my own home has been a dream come true. With complete control over its performance and security, I can easily make updates and changes. While there are challenges, such as having a reliable internet connection and proper knowledge, the rewards have been immense. It's given me ownership and the freedom to experiment.",
+        imageUrl: server,
+    },
+    {
+        id: 2,
+        title: 'Using Dockers',
+        description: "Running dockers on my server has been a game changer for me. By easily packaging applications with dependencies, it saves me countless hours of configuration and troubleshooting. It allows me to run multiple applications without conflicts and provides scalability by adjusting container resources. It's made managing and deploying applications faster, easier and flexible.",
+        imageUrl: dockers,
+    },
+    {
+        id: 3,
+        title: 'Network Security',
+        description: "I've implemented several security measures on my server, including SSH keys, firewalls, and port forwarding. Using SSH keys for authentication greatly reduces the risk of unauthorized access. Firewalls, both software and hardware, block incoming traffic that doesn't meet specific criteria, which reduces the risk of malicious attacks. Port forwarding is configured to allow only necessary traffic through to specific applications, further reducing the attack surface of my server.",
+        imageUrl: code,
+    },
+];
+
+
 
 const About = () => {
     return (
@@ -28,7 +54,25 @@ const About = () => {
                     </Container>
                 </Col>
             </Row>
+            <Row>
+                <Container>
+                    <Row>
+                        {projects.map(project => (
+                            <Col key={project.id} xs={12} md={4}>
+                                <Card className="my-3">
+                                    <Image src={project.imageUrl} rounded  style={{ maxHeight: '232px' }}/>
+                                    <Card.Body>
+                                        <Card.Title>{project.title}</Card.Title>
+                                        <Card.Text>{project.description}</Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+            </Row>
         </Container>
+
 
     );
 };
