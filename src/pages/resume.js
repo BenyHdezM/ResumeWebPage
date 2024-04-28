@@ -21,7 +21,7 @@ const Resume = () => {
         </Col>
         <Col md={2}>
           <div className="shadow-box">
-            <a href='http://benyhdez.com:4000/s/pJNw2PJi86gLABE/download/BenitoHernandez_RESUME.doc'>
+            <a href='https://docs.google.com/document/d/1VnCvYHZQAkPJ_XqNsxmSJJTXMyK5bTYE/edit?usp=drive_link&ouid=102108113440531017883&rtpof=true&sd=true'>
               Dowload Latest Version
               <Image src={doc_download} fluid />
             </a>
