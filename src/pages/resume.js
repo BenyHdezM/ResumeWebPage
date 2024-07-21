@@ -100,7 +100,19 @@ const Resume = () => {
           <h3 className="my-3">Professional Experience:</h3>
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h6>Jun 2022 - Present</h6>
+              <h6>Jul 2023 - Present</h6>
+              <h6>Applied Systems · Full-time</h6>
+              <h5>Sr. Software Engineer</h5>
+              <p> In my current role, I work on supporting and enhancing a legacy VB application within the insurance domain. This includes troubleshooting, maintenance, and the implementation of new features to improve functionality and user experience.
+                <br />
+                I also support microservices using technologies such as .NET and React, developing efficient and scalable solutions to address complex technical challenges. My work involves utilizing a range of tools, such as Visual Studio, Visual Studio Code, TFS, GitHub, MS SQL Management Studio, Cypress, and Jira, to ensure seamless collaboration and high-quality outcomes.
+                <br />
+                <br />
+                Environment: Web APIs, JS, HTML, CSS, GIT, MS SQL, NodeJs, Visual Studio Code, npm, nvm, ReactJs, VB, Visual Studio, TFS.</p>
+              <p></p>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <h6>Jun 2022 - May 2023</h6>
               <h6>Comcast Business</h6>
               <h5>Sr. Automation Engineer / FullStack .Net ReactJs</h5>
               <p>Development and support for Admin Portal Pages and Web APIs, using NestJS technologies and working on the UI using Angular as a front-end
@@ -178,18 +190,18 @@ const Resume = () => {
             <ListGroup.Item>
               <h6>Sep 2015 – Aug 2016<br />General Electric</h6>
               <h5>FullStack .Net Developer</h5>
-              <p>Development, Consulting, Design and Supporting for GE's software, migrations of old applications using VB6 and C++ 6. Developing new solutions 
-                in C# using ADO.NET to obtain information from the MS SQL database or update it. Upgrade old applications made in VB6 removing Crystal Report 
-                module and implement a free solution. 
+              <p>Development, Consulting, Design and Supporting for GE's software, migrations of old applications using VB6 and C++ 6. Developing new solutions
+                in C# using ADO.NET to obtain information from the MS SQL database or update it. Upgrade old applications made in VB6 removing Crystal Report
+                module and implement a free solution.
                 <br />
                 <br />
-                Environment: C#, VB6, C++, MS SQL, Windows Server 2003 and 2008, Visual Studio 2010, Remote Desktop, VPS,  SQL Server Management Studio, 
+                Environment: C#, VB6, C++, MS SQL, Windows Server 2003 and 2008, Visual Studio 2010, Remote Desktop, VPS,  SQL Server Management Studio,
                 Crystal Report, ADO.NET, ASP.Net.</p>
             </ListGroup.Item>
             <ListGroup.Item>
               <h6>Jul 2014 – Sep 2015<br />GameLoft</h6>
               <h5>C++, .Net, FullStack Developer</h5>
-              <p>Developing and debugging of the E-Shop sites corresponding with each carrier, including billing, transactions, notifications, SMS and Web services. 
+              <p>Developing and debugging of the E-Shop sites corresponding with each carrier, including billing, transactions, notifications, SMS and Web services.
                 VideoGame programmer for platforms like iOS, android and windows phones. Working on Dungeon Hunter 5 project in the area of porting to windows phone.
                 <br />
                 <br />
