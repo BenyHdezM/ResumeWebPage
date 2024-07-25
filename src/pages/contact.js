@@ -42,7 +42,7 @@ const ContactMe = () => {
                             speaking with you at our scheduled time. Thank you again for considering my services.
                         </h6>
                     </p>
-                    <Button href="https://nextcloud.benyhdez.com/apps/appointments/pub/gVV2XJNTwQsmD9wn/form" variant="primary">
+                    <Button href="https://nextcloud.benyhdez.com/index.php/apps/appointments/pub/gVV2XJNTwQsmD9wn/form" variant="primary">
                         <FaCalendar className="me-2" />
                         Book Now
                     </Button>
