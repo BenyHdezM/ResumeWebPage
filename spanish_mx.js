@@ -11,8 +11,8 @@
 const ES = {
   // ----- Head / meta / aria -----
   'Benito Hernandez Morales · Sr. Software Engineer': 'Benito Hernandez Morales · Ingeniero de Software Sr.',
-  'Senior Software Engineer, 12+ years in .NET, C#, React, Angular and SQL. AI-native engineering with Claude Code, MCP servers, custom skills and subagents. Based in Moses Lake, Washington.':
-    'Ingeniero de Software Senior, más de 12 años en .NET, C#, React, Angular y SQL. Ingeniería nativa en IA con Claude Code, servidores MCP, skills propios y subagentes. Radicado en Moses Lake, Washington.',
+  'Senior Software Engineer, 12+ years in .NET, C#, React, Angular and SQL. AI-native engineering with Claude Code, MCP servers, custom skills and subagents.':
+    'Ingeniero de Software Senior, más de 12 años en .NET, C#, React, Angular y SQL. Ingeniería nativa en IA con Claude Code, servidores MCP, skills propios y subagentes.',
   'Senior Software Engineer, 12+ years in .NET, React and SQL. AI-native engineering with agents, MCP and skills.':
     'Ingeniero de Software Senior, más de 12 años en .NET, React y SQL. Ingeniería nativa en IA con agentes, MCP y skills.',
   'Portrait of Benito Hernandez Morales': 'Retrato de Benito Hernandez Morales',
@@ -31,8 +31,7 @@ const ES = {
   'Contact': 'Contacto',
 
   // ----- Hero -----
-  'Senior Software Engineer · Moses Lake, WA': 'Ingeniero de Software Senior · Moses Lake, WA',
-  'Full-stack <b>.NET</b> and <b>React</b> engineer. I build and modernize enterprise software, and I use AI agents to ship code, tests and reviews faster.':
+    'Full-stack <b>.NET</b> and <b>React</b> engineer. I build and modernize enterprise software, and I use AI agents to ship code, tests and reviews faster.':
     'Ingeniero full-stack <b>.NET</b> y <b>React</b>. Construyo y modernizo software empresarial, y uso agentes de IA para entregar código, pruebas y revisiones más rápido.',
   'Download Resume': 'Descargar CV',
   'Editable document': 'Documento editable',
@@ -176,10 +175,8 @@ const ES = {
 
   // ----- Contact / footer -----
   "Let's talk": 'Hablemos',
-  'The fastest way to reach me is LinkedIn or Telegram. Email works too.':
-    'La forma más rápida de contactarme es LinkedIn o Telegram. El correo también funciona.',
+  'The fastest way to reach me is LinkedIn or Telegram.':
+    'La forma más rápida de contactarme es LinkedIn o Telegram.',
   'Message on LinkedIn': 'Escríbeme en LinkedIn',
-  'dt:Email': 'Correo',
-  'Phone': 'Teléfono',
   'Back to top ↑': 'Volver arriba ↑',
 };
