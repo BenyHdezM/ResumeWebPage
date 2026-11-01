@@ -45,70 +45,60 @@ const ES = {
 
   // ----- Experience -----
   'Career': 'Trayectoria',
-  'Jul 2023 – Present': 'Jul 2023 – Actualidad',
-  'Jun 2022 – May 2023': 'Jun 2022 – May 2023',
-  'Sep 2020 – Jun 2022': 'Sep 2020 – Jun 2022',
-  'Nov 2019 – Sep 2020': 'Nov 2019 – Sep 2020',
-  'May 2017 – Nov 2019': 'May 2017 – Nov 2019',
-  'Aug 2016 – May 2017': 'Ago 2016 – May 2017',
-  'Sep 2015 – Aug 2016': 'Sep 2015 – Ago 2016',
-  'Sep 2014 – Sep 2015': 'Sep 2014 – Sep 2015',
-  'Feb 2014 – Jul 2014': 'Feb 2014 – Jul 2014',
+  'My two most recent roles. The full history is on LinkedIn and in my resume.': 'Mis dos puestos más recientes. El historial completo está en LinkedIn y en mi CV.',
 
+  'Jul 2023 – Present': 'Jul 2023 – Actualidad',
   'Sr. Software Engineer': 'Ingeniero de Software Sr.',
   'Applied Systems · Epic insurance platform': 'Applied Systems · Plataforma de seguros Epic',
-  'Build agentic workflows with Claude Code, custom skills and MCP servers that connect LLMs to internal tools, repos and docs.':
-    'Construyo flujos agénticos con Claude Code, skills propios y servidores MCP que conectan LLMs con herramientas internas, repositorios y documentación.',
-  'Use AI to generate code, tests, reviews and refactors across a large multi-repo codebase.':
-    'Uso IA para generar código, pruebas, revisiones y refactorizaciones en una base de código grande con múltiples repositorios.',
-  'Develop .NET microservices and React front ends over gRPC and Apigee for financial modules.':
-    'Desarrollo microservicios .NET y front ends en React sobre gRPC y Apigee para módulos financieros.',
+  'Build agentic workflows with Claude Code, custom skills and MCP servers that connect LLMs to internal tools, repos and docs.': 'Construyo flujos agénticos con Claude Code, skills propios y servidores MCP que conectan LLMs con herramientas, repos y documentación internos.',
+  'Use prompt and context engineering to generate code, tests, reviews and refactors across a large multi-repo codebase.': 'Uso ingeniería de prompts y de contexto para generar código, pruebas, revisiones y refactors en una base de código grande con varios repos.',
+  'Develop .NET microservices and React front ends over gRPC and Apigee, with event-driven and reconciliation systems for financial software.': 'Desarrollo microservicios .NET y front ends en React sobre gRPC y Apigee, con sistemas de eventos y conciliación para software financiero.',
+  'Debug production issues and maintain a legacy VB app; containerized with Docker, Kubernetes and Tilt.': 'Depuro problemas en producción y mantengo una app VB heredada; trabajo con contenedores en Docker, Kubernetes y Tilt.',
 
   'Sr. FullStack .NET / React Developer': 'Desarrollador Sr. FullStack .NET / React',
-  'Built Admin Portal dashboard and calculator pages in React, backed by .NET Web APIs.':
-    'Construí el dashboard del portal de administración y las páginas de calculadoras en React, con Web APIs en .NET.',
-  'Supported NestJS and Angular services over MongoDB, PostgreSQL and SQL Server.':
-    'Di soporte a servicios en NestJS y Angular sobre MongoDB, PostgreSQL y SQL Server.',
+  'Built the Admin Portal dashboard and calculator pages from scratch in React and Bootstrap, backed by .NET Web APIs.': 'Construí desde cero el dashboard del portal de administración y las páginas de calculadoras en React y Bootstrap, con Web APIs en .NET.',
+  'Supported microservices and web apps built with NestJS and Angular.': 'Di soporte a microservicios y aplicaciones web hechas con NestJS y Angular.',
+  'Managed data across MongoDB, PostgreSQL and SQL Server; deployed with the Cloud Foundry CLI.': 'Administré datos en MongoDB, PostgreSQL y SQL Server; desplegué con la CLI de Cloud Foundry.',
+  'Worked in Agile/Scrum with Rally, with code reviews and API testing in Postman and Swagger.': 'Trabajé en Agile/Scrum con Rally, con revisiones de código y pruebas de APIs en Postman y Swagger.',
 
   'Sr. FullStack .NET Developer': 'Desarrollador Sr. FullStack .NET',
-  'Aptude · Client: USXpress': 'Aptude · Cliente: USXpress',
-  'Built customer and admin portals and Web APIs in C#, .NET Core and React.':
-    'Construí portales de clientes y de administración, y Web APIs, en C#, .NET Core y React.',
-  'Introduced pull-request reviews and CI/CD in Azure DevOps; ran technical interviews.':
-    'Introduje revisiones de pull requests y CI/CD en Azure DevOps; realicé entrevistas técnicas.',
+  'Aptude · Client: USXpress · Mexico': 'Aptude · Cliente: USXpress · México',
+  'Built and supported the USXpress customer and admin portals and Web APIs in C#, .NET Core, React and Bootstrap.': 'Construí y di soporte a los portales de clientes y administración de USXpress y sus Web APIs en C#, .NET Core, React y Bootstrap.',
+  'Introduced pull-request reviews and CI/CD in Azure DevOps.': 'Introduje revisiones de pull requests y CI/CD en Azure DevOps.',
+  'Coordinated releases across teams and databases; supported .NET Core microservices on Entity Framework and T-SQL.': 'Coordiné lanzamientos entre equipos y bases de datos; di soporte a microservicios .NET Core con Entity Framework y T-SQL.',
+  'Ran .NET, Angular and React technical interviews.': 'Realicé entrevistas técnicas de .NET, Angular y React.',
 
-  'Microsoft · Azure Global, Customer Analytics': 'Microsoft · Azure Global, Analítica de clientes',
-  'Built the Customer Analytics page in Angular 8 on .NET Core Web APIs.':
-    'Construí la página de analítica de clientes en Angular 8 sobre Web APIs de .NET Core.',
-  'Managed SQL Server with EF Code First migrations and wrote BDD tests.':
-    'Administré SQL Server con migraciones EF Code First y escribí pruebas BDD.',
+  'Microsoft · Azure Global, Customer Analytics · Redmond, WA': 'Microsoft · Azure Global, Analítica de clientes · Redmond, WA',
+  'Built the Customer Analytics page from scratch in Angular 8, on .NET Core Web APIs and microservices.': 'Construí desde cero la página de analítica de clientes en Angular 8, sobre Web APIs y microservicios de .NET Core.',
+  'Managed the SQL Server schema with EF Code First migrations and T-SQL stored procedures.': 'Administré el esquema de SQL Server con migraciones EF Code First y procedimientos almacenados T-SQL.',
+  'Wrote BDD unit tests and coordinated releases through Azure DevOps pull requests in Scrum.': 'Escribí pruebas unitarias BDD y coordiné lanzamientos con pull requests de Azure DevOps en Scrum.',
 
   'Software Engineer and Consultant': 'Ingeniero de Software y Consultor',
-  '<b>Check Into Cash:</b> e-commerce site, reporting tools and Web APIs in .NET Core and Angular.':
-    '<b>Check Into Cash:</b> sitio de e-commerce, herramientas de reportes y Web APIs en .NET Core y Angular.',
-  '<b>Becton Dickinson:</b> upgraded C++/MFC, C# and VB6 apps; configured CIISafe for the U.S. DoD.':
-    '<b>Becton Dickinson:</b> actualicé aplicaciones C++/MFC, C# y VB6; configuré CIISafe para el Departamento de Defensa de EE. UU.',
+  'NearShore Technology · Mexico': 'NearShore Technology · México',
+  '<b>Check Into Cash</b> (Jan – Nov 2019): e-commerce site, reporting tools and Web APIs in .NET Core and Angular; fixed production incidents.': '<b>Check Into Cash</b> (ene – nov 2019): sitio de e-commerce, herramientas de reportes y Web APIs en .NET Core y Angular; resolví incidentes en producción.',
+  '<b>Becton Dickinson</b> (May 2017 – Jan 2019): upgraded C++ (MFC), C# and VB6 apps; configured CIISafe for the U.S. DoD.': '<b>Becton Dickinson</b> (may 2017 – ene 2019): actualicé apps C++ (MFC), C# y VB6; configuré CIISafe para el Departamento de Defensa de EE. UU.',
+  '<b>Becton Dickinson:</b> built a logging DLL (log4net / ADO.NET) and an Angular page to display the logs.': '<b>Becton Dickinson:</b> construí una DLL de logging (log4net / ADO.NET) y una página en Angular para mostrar los registros.',
 
+  'Aug 2016 – May 2017': 'Ago 2016 – May 2017',
   'Software Engineer, Project Lead': 'Ingeniero de Software, Líder de Proyecto',
   'MarathonGroup Mexico': 'MarathonGroup México',
-  'Led the team that built a seller portal on Acumatica ERP SOAP services.':
-    'Lideré el equipo que construyó un portal de vendedores sobre servicios SOAP de Acumatica ERP.',
-  'Delivered Android apps and ran Linux servers on Azure.':
-    'Entregué aplicaciones Android y administré servidores Linux en Azure.',
+  'Led the team that built a Seller Portal from scratch on Acumatica ERP SOAP services, simplifying data entry for sales staff.': 'Lideré el equipo que construyó desde cero un portal de vendedores sobre servicios SOAP de Acumatica ERP, simplificando la captura de datos de ventas.',
+  'Built with CakePHP, Bootstrap and JavaScript over MS SQL and MySQL; delivered Android apps and ran Linux servers on Azure.': 'Desarrollé con CakePHP, Bootstrap y JavaScript sobre MS SQL y MySQL; entregué apps Android y administré servidores Linux en Azure.',
 
+  'Sep 2015 – Aug 2016': 'Sep 2015 – Ago 2016',
   'VB, C++ and C# Developer': 'Desarrollador VB, C++ y C#',
-  'Softtek · Client: General Electric (Aviation)': 'Softtek · Cliente: General Electric (Aviación)',
-  'Migrated legacy VB6 and C++ 6 apps and built C# WinForms tools on SQL Server.':
-    'Migré aplicaciones heredadas en VB6 y C++ 6 y construí herramientas WinForms en C# sobre SQL Server.',
+  'Softtek · Client: General Electric (Aviation) · Aguascalientes, Mexico': 'Softtek · Cliente: General Electric (Aviación) · Aguascalientes, México',
+  'Supported and migrated legacy VB6 and C++ 6 apps to newer Windows Server versions.': 'Di soporte y migré apps heredadas en VB6 y C++ 6 a versiones más nuevas de Windows Server.',
+  'Built C# WinForms tools on SQL Server, replacing Crystal Reports; maintained ASP.NET pages and Windows Server 2003/2008.': 'Construí herramientas WinForms en C# sobre SQL Server, reemplazando Crystal Reports; mantuve páginas ASP.NET y Windows Server 2003/2008.',
 
   'Web and Video Game Developer': 'Desarrollador Web y de Videojuegos',
-  'Built carrier e-shop sites across Latin America: billing, SMS and web services.':
-    'Construí tiendas en línea para operadores móviles en Latinoamérica: facturación, SMS y servicios web.',
-  'Ported Dungeon Hunter 5 to Windows Phone.': 'Porté Dungeon Hunter 5 a Windows Phone.',
+  'Gameloft · Mexico': 'Gameloft · México',
+  'Built and debugged carrier e-shop sites across Latin America: billing, SMS and carrier web services in PHP and MySQL.': 'Construí y depuré tiendas en línea para operadores móviles en Latinoamérica: facturación, SMS y servicios web en PHP y MySQL.',
+  'Ported Dungeon Hunter 5 to Windows Phone: C# ↔ C++ bridge modules, input handling and QA fixes.': 'Porté Dungeon Hunter 5 a Windows Phone: módulos puente C# ↔ C++, manejo de entrada y correcciones de QA.',
 
   'IT Intern, .NET C# Developer': 'Practicante de TI, Desarrollador .NET C#',
-  'Automated incident tickets and Oracle reports with C# and Excel VBA.':
-    'Automaticé tickets de incidentes y reportes de Oracle con C# y Excel VBA.',
+  'Tenaris Tamsa · Veracruz, Mexico': 'Tenaris Tamsa · Veracruz, México',
+  'Built C# console apps and Excel VBA automation for level 2 IT incident tickets and weekly Oracle reports.': 'Construí apps de consola en C# y automatizaciones en Excel VBA para tickets de incidentes de TI nivel 2 y reportes semanales de Oracle.',
 
   // ----- AI-native engineering -----
   'How I work today': 'Cómo trabajo hoy',

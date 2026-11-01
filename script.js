@@ -201,12 +201,19 @@ function setupToggle(listId, toggleId, sectionId) {
     refreshLabel();
     count.hidden = open;
     if (open) {
-      extras[0].querySelector('a, button').focus({ preventScroll: true });
+      // Timeline entries have no link inside, so focus the entry itself.
+      const first = extras[0];
+      const target = first.querySelector('a, button') || first;
+      if (target === first) first.tabIndex = -1;
+      target.focus({ preventScroll: true });
     } else {
       document.getElementById(sectionId).scrollIntoView({ block: 'start' });
     }
   });
 }
+
+// ---------- Experience: older roles start collapsed ----------
+setupToggle('timeline', 'experience-more', 'experience');
 
 // ---------- GitHub projects ----------
 fill(

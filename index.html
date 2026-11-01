@@ -95,8 +95,9 @@
           <div class="section-head">
             <p class="kicker">Career</p>
             <h2>Experience</h2>
+            <p>My two most recent roles. The full history is on LinkedIn and in my resume.</p>
           </div>
-          <ol class="timeline">
+          <ol class="timeline" id="timeline">
             <li>
               <p class="when">Jul 2023 – Present</p>
               <div class="job current">
@@ -104,10 +105,11 @@
                 <p class="org">Applied Systems · Epic insurance platform</p>
                 <ul class="points">
                   <li>Build agentic workflows with Claude Code, custom skills and MCP servers that connect LLMs to internal tools, repos and docs.</li>
-                  <li>Use AI to generate code, tests, reviews and refactors across a large multi-repo codebase.</li>
-                  <li>Develop .NET microservices and React front ends over gRPC and Apigee for financial modules.</li>
+                  <li>Use prompt and context engineering to generate code, tests, reviews and refactors across a large multi-repo codebase.</li>
+                  <li>Develop .NET microservices and React front ends over gRPC and Apigee, with event-driven and reconciliation systems for financial software.</li>
+                  <li>Debug production issues and maintain a legacy VB app; containerized with Docker, Kubernetes and Tilt.</li>
                 </ul>
-                <p class="stack"><span>.NET</span><span>React</span><span>gRPC</span><span>Kubernetes</span><span>Claude Code</span><span>MCP</span></p>
+                <p class="stack"><span>gRPC</span><span>Kubernetes</span><span>Docker</span><span>Tilt</span><span>SQL Server</span><span>Claude Code</span><span>MCP</span><span>.NET</span><span>React</span></p>
               </div>
             </li>
             <li>
@@ -116,94 +118,109 @@
                 <h3>Sr. FullStack .NET / React Developer</h3>
                 <p class="org">Comcast Business · Seattle, WA</p>
                 <ul class="points">
-                  <li>Built Admin Portal dashboard and calculator pages in React, backed by .NET Web APIs.</li>
-                  <li>Supported NestJS and Angular services over MongoDB, PostgreSQL and SQL Server.</li>
+                  <li>Built the Admin Portal dashboard and calculator pages from scratch in React and Bootstrap, backed by .NET Web APIs.</li>
+                  <li>Supported microservices and web apps built with NestJS and Angular.</li>
+                  <li>Managed data across MongoDB, PostgreSQL and SQL Server; deployed with the Cloud Foundry CLI.</li>
+                  <li>Worked in Agile/Scrum with Rally, with code reviews and API testing in Postman and Swagger.</li>
                 </ul>
-                <p class="stack"><span>React</span><span>.NET</span><span>NestJS</span><span>Angular</span><span>Cloud Foundry</span></p>
+                <p class="stack"><span>React</span><span>Bootstrap</span><span>.NET</span><span>NestJS</span><span>Angular</span><span>MongoDB</span><span>PostgreSQL</span><span>Cloud Foundry</span></p>
               </div>
             </li>
-            <li>
+            <li class="extra" hidden>
               <p class="when">Sep 2020 – Jun 2022</p>
               <div class="job">
                 <h3>Sr. FullStack .NET Developer</h3>
-                <p class="org">Aptude · Client: USXpress</p>
+                <p class="org">Aptude · Client: USXpress · Mexico</p>
                 <ul class="points">
-                  <li>Built customer and admin portals and Web APIs in C#, .NET Core and React.</li>
-                  <li>Introduced pull-request reviews and CI/CD in Azure DevOps; ran technical interviews.</li>
+                  <li>Built and supported the USXpress customer and admin portals and Web APIs in C#, .NET Core, React and Bootstrap.</li>
+                  <li>Introduced pull-request reviews and CI/CD in Azure DevOps.</li>
+                  <li>Coordinated releases across teams and databases; supported .NET Core microservices on Entity Framework and T-SQL.</li>
+                  <li>Ran .NET, Angular and React technical interviews.</li>
                 </ul>
-                <p class="stack"><span>C#</span><span>.NET Core</span><span>React</span><span>Azure DevOps</span><span>EF</span></p>
+                <p class="stack"><span>C#</span><span>.NET Core</span><span>React</span><span>Bootstrap</span><span>Azure DevOps</span><span>EF</span><span>T-SQL</span></p>
               </div>
             </li>
-            <li>
+            <li class="extra" hidden>
               <p class="when">Nov 2019 – Sep 2020</p>
               <div class="job">
                 <h3>Sr. FullStack .NET Developer</h3>
-                <p class="org">Microsoft · Azure Global, Customer Analytics</p>
+                <p class="org">Microsoft · Azure Global, Customer Analytics · Redmond, WA</p>
                 <ul class="points">
-                  <li>Built the Customer Analytics page in Angular 8 on .NET Core Web APIs.</li>
-                  <li>Managed SQL Server with EF Code First migrations and wrote BDD tests.</li>
+                  <li>Built the Customer Analytics page from scratch in Angular 8, on .NET Core Web APIs and microservices.</li>
+                  <li>Managed the SQL Server schema with EF Code First migrations and T-SQL stored procedures.</li>
+                  <li>Wrote BDD unit tests and coordinated releases through Azure DevOps pull requests in Scrum.</li>
                 </ul>
-                <p class="stack"><span>Angular</span><span>.NET Core</span><span>SQL Server</span><span>BDD</span></p>
+                <p class="stack"><span>Angular</span><span>.NET Core</span><span>SQL Server</span><span>BDD</span><span>Azure DevOps</span></p>
               </div>
             </li>
-            <li>
+            <li class="extra" hidden>
               <p class="when">May 2017 – Nov 2019</p>
               <div class="job">
                 <h3>Software Engineer and Consultant</h3>
-                <p class="org">NearShore Technology</p>
+                <p class="org">NearShore Technology · Mexico</p>
                 <ul class="points">
-                  <li><b>Check Into Cash:</b> e-commerce site, reporting tools and Web APIs in .NET Core and Angular.</li>
-                  <li><b>Becton Dickinson:</b> upgraded C++/MFC, C# and VB6 apps; configured CIISafe for the U.S. DoD.</li>
+                  <li><b>Check Into Cash</b> (Jan – Nov 2019): e-commerce site, reporting tools and Web APIs in .NET Core and Angular; fixed production incidents.</li>
+                  <li><b>Becton Dickinson</b> (May 2017 – Jan 2019): upgraded C++ (MFC), C# and VB6 apps; configured CIISafe for the U.S. DoD.</li>
+                  <li><b>Becton Dickinson:</b> built a logging DLL (log4net / ADO.NET) and an Angular page to display the logs.</li>
                 </ul>
                 <p class="stack"><span>.NET Core</span><span>Angular</span><span>C++</span><span>VB6</span><span>SQL Server</span></p>
               </div>
             </li>
-            <li>
+            <li class="extra" hidden>
               <p class="when">Aug 2016 – May 2017</p>
               <div class="job">
                 <h3>Software Engineer, Project Lead</h3>
                 <p class="org">MarathonGroup Mexico</p>
                 <ul class="points">
-                  <li>Led the team that built a seller portal on Acumatica ERP SOAP services.</li>
-                  <li>Delivered Android apps and ran Linux servers on Azure.</li>
+                  <li>Led the team that built a Seller Portal from scratch on Acumatica ERP SOAP services, simplifying data entry for sales staff.</li>
+                  <li>Built with CakePHP, Bootstrap and JavaScript over MS SQL and MySQL; delivered Android apps and ran Linux servers on Azure.</li>
                 </ul>
                 <p class="stack"><span>CakePHP</span><span>MySQL</span><span>SOAP</span><span>Android</span></p>
               </div>
             </li>
-            <li>
+            <li class="extra" hidden>
               <p class="when">Sep 2015 – Aug 2016</p>
               <div class="job">
                 <h3>VB, C++ and C# Developer</h3>
-                <p class="org">Softtek · Client: General Electric (Aviation)</p>
+                <p class="org">Softtek · Client: General Electric (Aviation) · Aguascalientes, Mexico</p>
                 <ul class="points">
-                  <li>Migrated legacy VB6 and C++ 6 apps and built C# WinForms tools on SQL Server.</li>
+                  <li>Supported and migrated legacy VB6 and C++ 6 apps to newer Windows Server versions.</li>
+                  <li>Built C# WinForms tools on SQL Server, replacing Crystal Reports; maintained ASP.NET pages and Windows Server 2003/2008.</li>
                 </ul>
                 <p class="stack"><span>C#</span><span>VB6</span><span>C++</span><span>SQL Server</span></p>
               </div>
             </li>
-            <li>
+            <li class="extra" hidden>
               <p class="when">Sep 2014 – Sep 2015</p>
               <div class="job">
                 <h3>Web and Video Game Developer</h3>
-                <p class="org">Gameloft</p>
+                <p class="org">Gameloft · Mexico</p>
                 <ul class="points">
-                  <li>Built carrier e-shop sites across Latin America: billing, SMS and web services.</li>
-                  <li>Ported Dungeon Hunter 5 to Windows Phone.</li>
+                  <li>Built and debugged carrier e-shop sites across Latin America: billing, SMS and carrier web services in PHP and MySQL.</li>
+                  <li>Ported Dungeon Hunter 5 to Windows Phone: C# ↔ C++ bridge modules, input handling and QA fixes.</li>
                 </ul>
                 <p class="stack"><span>PHP</span><span>MySQL</span><span>C++</span><span>C#</span><span>OpenGL</span></p>
               </div>
             </li>
-            <li>
+            <li class="extra" hidden>
               <p class="when">Feb 2014 – Jul 2014</p>
               <div class="job">
                 <h3>IT Intern, .NET C# Developer</h3>
-                <p class="org">Tenaris Tamsa</p>
+                <p class="org">Tenaris Tamsa · Veracruz, Mexico</p>
                 <ul class="points">
-                  <li>Automated incident tickets and Oracle reports with C# and Excel VBA.</li>
+                  <li>Built C# console apps and Excel VBA automation for level 2 IT incident tickets and weekly Oracle reports.</li>
                 </ul>
+                <p class="stack"><span>C#</span><span>Excel VBA</span><span>Oracle</span></p>
               </div>
             </li>
           </ol>
+          <div class="more" id="experience-more" hidden>
+            <button class="more-toggle" type="button" aria-controls="timeline" aria-expanded="false">
+              <span class="more-label">Show all</span>
+              <span class="more-count"></span>
+              <svg class="caret" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
         </div>
       </section>
 
