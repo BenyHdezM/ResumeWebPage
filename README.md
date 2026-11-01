@@ -1,18 +1,15 @@
-# Getting Started
-### `npm install`
+# Resume web page
 
-## Runing on LocalHost
+Static site: `index.html`, `style.css`, `script.js` and `assets/`. No build step.
 
-In the project directory, you can run:
+## Local preview
 
-### `npm start`
+    python3 -m http.server 8000
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
+Open http://localhost:8000
 
 ## Deployment
 
+    docker compose -f docker-compose.prod.yml up -d --build
 
-https://mherman.org/blog/dockerizing-a-react-app/
-docker-compose -f docker-compose.prod.yml up -d --build
+Served by nginx on port 3001. Edit the content directly in `index.html`.

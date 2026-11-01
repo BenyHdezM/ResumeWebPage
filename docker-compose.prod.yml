@@ -1,7 +1,5 @@
-version: '3.7'
-
 services:
-  sample-prod:
+  resume-web:
     container_name: resume-web
     build:
       context: .
