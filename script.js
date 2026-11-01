@@ -27,7 +27,7 @@ setYears();
 let lang = 'en';
 const langListeners = [];
 const original = new WeakMap();
-const TEXT_SELECTOR = 'h1, h2, h3, h4, p, li, dt, dd, .btn, .bar nav a, .tags a, footer a, .skip';
+const TEXT_SELECTOR = 'h1, h2, h3, h4, p, li, dt, dd, .btn, .bar nav a, .tags a, footer a, .skip, .dl-menu small';
 const ATTRS = [
   ['[aria-label]:not(.play)', 'aria-label'],
   ['img[alt]:not([alt=""])', 'alt'],
@@ -294,6 +294,37 @@ dialog.addEventListener('close', () => frame.replaceChildren());
 dialog.querySelector('.video-close').addEventListener('click', () => dialog.close());
 // Click on the dimmed area outside the player closes it.
 dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+
+// Download Resume: disclosure button + menu of links. Arrow keys move between options.
+{
+  const toggle = document.querySelector('.dl-toggle');
+  const menu = document.getElementById('dl-menu');
+  const items = [...menu.querySelectorAll('a')];
+  const isOpen = () => toggle.getAttribute('aria-expanded') === 'true';
+  const setDl = (open, focusIndex) => {
+    toggle.setAttribute('aria-expanded', String(open));
+    if (open && focusIndex !== undefined) items[focusIndex]?.focus();
+  };
+  toggle.addEventListener('click', () => setDl(!isOpen()));
+  toggle.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); setDl(true, 0); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); setDl(true, items.length - 1); }
+  });
+  menu.addEventListener('click', (e) => { if (e.target.closest('a')) setDl(false); });
+  menu.addEventListener('keydown', (e) => {
+    const at = items.indexOf(document.activeElement);
+    const go = { ArrowDown: at + 1, ArrowUp: at - 1, Home: 0, End: items.length - 1 }[e.key];
+    if (go !== undefined) { e.preventDefault(); items[(go + items.length) % items.length].focus(); }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen()) { setDl(false); toggle.focus(); }
+  });
+  // Tabbing out of the widget closes it; so does clicking anywhere else.
+  document.querySelector('.dl').addEventListener('focusout', (e) => {
+    if (isOpen() && !e.currentTarget.contains(e.relatedTarget)) setDl(false);
+  });
+  document.addEventListener('click', (e) => { if (!e.target.closest('.dl')) setDl(false); });
+}
 
 // ---------- Start: ?lang=es|en, then the saved choice, then the browser language ----------
 {

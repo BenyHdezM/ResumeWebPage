@@ -35,10 +35,12 @@ const ES = {
   'Full-stack <b>.NET</b> and <b>React</b> engineer. I build and modernize enterprise software, and I use AI agents to ship code, tests and reviews faster.':
     'Ingeniero full-stack <b>.NET</b> y <b>React</b>. Construyo y modernizo software empresarial, y uso agentes de IA para entregar código, pruebas y revisiones más rápido.',
   'Download Resume': 'Descargar CV',
+  'Editable document': 'Documento editable',
+  'Ready to print': 'Listo para imprimir',
   'Get in touch': 'Contáctame',
   '<span id="years">#</span>+ years': '<span id="years">#</span>+ años',
   'Now at': 'Actualmente en',
-  '20+ years': '20+ años',
+  '26+ years': '26+ años',
   'dt:Languages': 'Idiomas',
 
   // ----- Experience -----
@@ -150,8 +152,8 @@ const ES = {
   'About me': 'Acerca de mí',
   'Senior full-stack engineer with <span id="years-about">#</span>+ years building and modernizing enterprise systems in C#/.NET, React, Angular and C/C++, for clients like Microsoft, Comcast Business, General Electric and Becton Dickinson.':
     'Ingeniero full-stack senior con más de <span id="years-about">#</span> años construyendo y modernizando sistemas empresariales en C#/.NET, React, Angular y C/C++, para clientes como Microsoft, Comcast Business, General Electric y Becton Dickinson.',
-  'I have used GNU/Linux for more than 20 years. I contribute to open source and publish Spanish-language tech videos.':
-    'Uso GNU/Linux desde hace más de 20 años. Contribuyo a proyectos de código abierto y publico videos de tecnología en español.',
+  'I have used GNU/Linux for more than 26 years. I contribute to open source and publish Spanish-language tech videos.':
+    'Uso GNU/Linux desde hace más de 26 años. Contribuyo a proyectos de código abierto y publico videos de tecnología en español.',
   'Education': 'Educación',
   '<b>B.S. Computer Systems Engineering</b><br><span class="muted">National Institute of Technology of Mexico · 2009 – 2014</span>':
     '<b>Ingeniería en Sistemas Computacionales</b><br><span class="muted">Instituto Tecnológico Nacional de México · 2009 – 2014</span>',
