@@ -34,6 +34,18 @@ if ('IntersectionObserver' in window && sections.length) {
   sections.forEach((s) => observer.observe(s));
 }
 
+// Mobile menu: toggle button, closes on link tap, Escape or outside tap.
+const bar = document.querySelector('.bar');
+const menuBtn = document.querySelector('.menu-toggle');
+function setMenu(open) {
+  bar.classList.toggle('menu-open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+}
+menuBtn.addEventListener('click', () => setMenu(!bar.classList.contains('menu-open')));
+bar.querySelector('nav').addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+document.addEventListener('click', (e) => { if (!bar.contains(e.target)) setMenu(false); });
+
 function el(tag, props = {}, ...children) {
   const node = Object.assign(document.createElement(tag), props);
   node.append(...children);

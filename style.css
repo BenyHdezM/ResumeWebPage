@@ -97,6 +97,17 @@ code { font: 400 .88em var(--font-mono); background: var(--accent-soft); padding
 .bar nav a[aria-current="true"] { color: var(--fg); border-bottom-color: var(--accent); }
 .bar nav .nav-cta { min-height: 36px; margin-left: .4rem; color: var(--accent); font-weight: 600; border: 1px solid var(--accent); border-radius: 4px; }
 .bar nav .nav-cta:hover { background: var(--accent); color: var(--accent-ink); }
+.menu-toggle { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -.5rem; padding: 0; background: none; border: 0; color: var(--fg); cursor: pointer; }
+.menu-toggle .m-close, .menu-toggle[aria-expanded="true"] .m-open { display: none; }
+.menu-toggle[aria-expanded="true"] .m-close { display: inline; }
+@media (max-width: 839px) {
+  .menu-toggle { display: inline-flex; }
+  .bar nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem 20px 1rem; overflow: visible; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0, 0, 0, .12); }
+  .bar.menu-open nav { display: flex; }
+  .bar nav a { border-bottom: 1px solid var(--line); padding-inline: 0; font-size: 1.05rem; }
+  .bar nav a[aria-current="true"] { border-bottom-color: var(--accent); }
+  .bar nav .nav-cta { justify-content: center; margin: .9rem 0 0; padding-inline: 1rem; border: 1px solid var(--accent); }
+}
 
 /* ---------- Buttons ---------- */
 .btn { display: inline-flex; align-items: center; min-height: 44px; padding: .55rem 1.2rem; border: 1px solid var(--line); border-radius: 4px; color: var(--fg); background: var(--surface); text-decoration: none; font-weight: 500; transition: border-color .15s, background .15s; }
@@ -236,6 +247,9 @@ h2 { font: 600 clamp(1.7rem, 3vw, 2.2rem)/1.15 var(--font-display); letter-spaci
 .details dt { font: 500 .72rem var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
 .details dd { margin: .1rem 0 0; font-size: 1.05rem; overflow-wrap: anywhere; }
 .details a { color: var(--ink-accent); }
+.details > div { display: grid; grid-template-columns: 22px 1fr; column-gap: .85rem; align-items: start; }
+.details .i { grid-row: 1 / span 2; width: 22px; height: 22px; margin-top: .1rem; color: var(--ink-accent); }
+.contact-card .btn .i { width: 1.1em; height: 1.1em; margin-right: .5em; vertical-align: -.18em; }
 #contact :focus-visible, footer :focus-visible { outline-color: var(--ink-accent); }
 
 footer { background: var(--ink-block); color: var(--ink-muted); border-top: 1px solid var(--ink-line); font-size: .88rem; }
