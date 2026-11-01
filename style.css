@@ -100,8 +100,14 @@ code { font: 400 .88em var(--font-mono); background: var(--accent-soft); padding
 .menu-toggle { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -.5rem; padding: 0; background: none; border: 0; color: var(--fg); cursor: pointer; }
 .menu-toggle .m-close, .menu-toggle[aria-expanded="true"] .m-open { display: none; }
 .menu-toggle[aria-expanded="true"] .m-close { display: inline; }
+.lang { display: flex; align-items: center; margin-left: .6rem; }
+.lang button { display: grid; place-items: center; width: 40px; height: 44px; padding: 0; background: none; border: 0; cursor: pointer; opacity: .6; transition: opacity .15s; }
+.lang button:hover, .lang button[aria-pressed="true"] { opacity: 1; }
+.lang svg { display: block; width: 26px; height: 26px; border-radius: 50%; box-shadow: 0 0 0 1px var(--line); }
+.lang button[aria-pressed="true"] svg { box-shadow: 0 0 0 2px var(--accent); }
 @media (max-width: 839px) {
-  .menu-toggle { display: inline-flex; }
+  .menu-toggle { display: inline-flex; order: 3; }
+  .lang { order: 2; margin-left: auto; }
   .bar nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem 20px 1rem; overflow: visible; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0, 0, 0, .12); }
   .bar.menu-open nav { display: flex; }
   .bar nav a { border-bottom: 1px solid var(--line); padding-inline: 0; font-size: 1.05rem; }
@@ -249,7 +255,7 @@ h2 { font: 600 clamp(1.7rem, 3vw, 2.2rem)/1.15 var(--font-display); letter-spaci
 .details a { color: var(--ink-accent); }
 .details > div { display: grid; grid-template-columns: 22px 1fr; column-gap: .85rem; align-items: start; }
 .details .i { grid-row: 1 / span 2; width: 22px; height: 22px; margin-top: .1rem; color: var(--ink-accent); }
-.contact-card .btn .i { width: 1.1em; height: 1.1em; margin-right: .5em; vertical-align: -.18em; }
+.btn .i { width: 1.1em; height: 1.1em; margin-right: .5em; vertical-align: -.18em; }
 #contact :focus-visible, footer :focus-visible { outline-color: var(--ink-accent); }
 
 footer { background: var(--ink-block); color: var(--ink-muted); border-top: 1px solid var(--ink-line); font-size: .88rem; }

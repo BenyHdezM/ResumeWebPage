@@ -12,8 +12,101 @@ const VISIBLE_CARDS = 6;
 const START_YEAR = 2014;
 const now = new Date().getFullYear();
 document.getElementById('year').textContent = now;
-for (const id of ['years', 'years-about']) {
-  document.getElementById(id).textContent = now - START_YEAR;
+// Also re-run after a language switch, because translated text replaces these spans.
+function setYears() {
+  for (const id of ['years', 'years-about']) {
+    const node = document.getElementById(id);
+    if (node) node.textContent = now - START_YEAR;
+  }
+}
+setYears();
+
+// ---------- Language (English / Spanish) ----------
+// English is the text in index.html; Spanish comes from the ES dictionary (spanish_mx.js).
+// Each element's original English is remembered so switching back restores it.
+let lang = 'en';
+const langListeners = [];
+const original = new WeakMap();
+const TEXT_SELECTOR = 'h1, h2, h3, h4, p, li, dt, dd, .btn, .bar nav a, .tags a, footer a, .skip';
+const ATTRS = [
+  ['[aria-label]:not(.play)', 'aria-label'],
+  ['img[alt]:not([alt=""])', 'alt'],
+  ['meta[name="description"], meta[property="og:description"]', 'content'],
+];
+
+function t(text) {
+  return (lang === 'es' && ES[text]) || text;
+}
+
+// Years are live counters, so the dictionary writes them as "#".
+const keyOf = (html) => html
+  .replace(/(<span id="years(?:-about)?">)\d+(<\/span>)/, '$1#$2')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+function translateText() {
+  for (const node of document.querySelectorAll(TEXT_SELECTOR)) {
+    // Wrappers (a timeline <li> holding <p> and <ul>) are skipped: their children are
+    // translated on their own, and rewriting the wrapper would undo that work.
+    if (node.querySelector(TEXT_SELECTOR)) continue;
+    // Buttons with an icon: translate only their text, not the <svg>.
+    const textNode = node.querySelector(':scope > svg')
+      ? [...node.childNodes].find((n) => n.nodeType === 3 && n.textContent.trim())
+      : null;
+    const target = textNode || node;
+    if (!original.has(target)) {
+      original.set(target, textNode
+        ? { raw: textNode.textContent, key: textNode.textContent.trim() }
+        : { raw: node.innerHTML, key: keyOf(node.innerHTML) });
+    }
+    const { raw, key } = original.get(target);
+    const scope = node.closest('.tags') ? 'tag' : node.tagName.toLowerCase();
+    const es = lang === 'es' && (ES[`${scope}:${key}`] || ES[key]);
+    const value = es || raw;
+    if (textNode) {
+      textNode.textContent = es || raw;
+    } else if (node.innerHTML !== value) {
+      node.innerHTML = value;
+    }
+  }
+}
+
+function translateAttrs() {
+  for (const [selector, attr] of ATTRS) {
+    for (const node of document.querySelectorAll(selector)) {
+      const store = original.get(node) || {};
+      if (!(attr in store)) { store[attr] = node.getAttribute(attr); original.set(node, store); }
+      const base = store[attr];
+      node.setAttribute(attr, (lang === 'es' && ES[base]) || base);
+    }
+  }
+}
+
+function applyLang() {
+  translateText();
+  translateAttrs();
+  if (!original.has(document)) original.set(document, document.title);
+  const baseTitle = original.get(document);
+  document.title = (lang === 'es' && ES[baseTitle]) || baseTitle;
+  document.documentElement.lang = lang;
+  setYears();
+  for (const btn of document.querySelectorAll('.play[data-title]')) {
+    btn.setAttribute('aria-label', `${t('Play video:')} ${btn.dataset.title}`);
+  }
+  for (const btn of document.querySelectorAll('.lang button')) {
+    btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
+  }
+  langListeners.forEach((fn) => fn());
+}
+
+function setLang(next) {
+  lang = next;
+  try { localStorage.setItem('lang', next); } catch { /* storage may be blocked */ }
+  applyLang();
+}
+
+for (const btn of document.querySelectorAll('.lang button')) {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
 }
 
 // Highlight the nav link of the section currently in view.
@@ -74,9 +167,11 @@ async function fill(containerId, load, toCard, emptyMsg) {
       }
     });
     box.replaceChildren(...(cards.length ? cards : [el('p', { className: 'muted' }, emptyMsg)]));
+    applyLang();
     return cards.length;
   } catch (err) {
     box.replaceChildren(el('p', { className: 'muted' }, 'This section could not be loaded right now.'));
+    applyLang();
     return 0;
   }
 }
@@ -93,11 +188,17 @@ function setupToggle(listId, toggleId, sectionId) {
   count.textContent = `+${extras.length}`;
   toggle.hidden = false;
 
+  const refreshLabel = () => {
+    label.textContent = t(button.getAttribute('aria-expanded') === 'true' ? 'Show fewer' : 'Show all');
+  };
+  langListeners.push(refreshLabel);
+  refreshLabel();
+
   button.addEventListener('click', () => {
     const open = button.getAttribute('aria-expanded') !== 'true';
     extras.forEach((card) => { card.hidden = !open; });
     button.setAttribute('aria-expanded', String(open));
-    label.textContent = open ? 'Show fewer' : 'Show all';
+    refreshLabel();
     count.hidden = open;
     if (open) {
       extras[0].querySelector('a, button').focus({ preventScroll: true });
@@ -149,7 +250,8 @@ fill(
   (v) => {
     const title = decodeEntities(v.title);
     const play = el('button', { type: 'button', className: 'play' });
-    play.setAttribute('aria-label', `Play video: ${title}`);
+    play.dataset.title = title;
+    play.setAttribute('aria-label', `${t('Play video:')} ${title}`);
     play.addEventListener('click', () => openVideo(v.id, title));
     const icon = el('span', { className: 'play-icon' });
     icon.setAttribute('aria-hidden', 'true');
@@ -192,3 +294,14 @@ dialog.addEventListener('close', () => frame.replaceChildren());
 dialog.querySelector('.video-close').addEventListener('click', () => dialog.close());
 // Click on the dimmed area outside the player closes it.
 dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+
+// ---------- Start: ?lang=es|en, then the saved choice, then the browser language ----------
+{
+  let saved = null;
+  try { saved = localStorage.getItem('lang'); } catch { /* storage may be blocked */ }
+  const fromUrl = new URLSearchParams(location.search).get('lang');
+  const browser = (navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en';
+  const pick = [fromUrl, saved, browser].find((v) => v === 'en' || v === 'es');
+  lang = pick;
+  applyLang();
+}
